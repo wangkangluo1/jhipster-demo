@@ -2,9 +2,8 @@ FROM java:openjdk-8-jre-alpine
 
 ENV JHIPSTER_SLEEP 0
 
-RUN sh -c 'wget http://7mno2y.com1.z0.glb.clouddn.com/docker-jhipster-0.0.1-SNAPSHOT.war'
 # add directly the war
-ADD *.war /app.war
+ADD http://7mno2y.com1.z0.glb.clouddn.com/docker-jhipster-0.0.1-SNAPSHOT.war /app.war
 
 RUN sh -c 'touch /app.war'
 VOLUME /tmp
